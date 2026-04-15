@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shop | Paws n' Play</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/ui/header-footer.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12) !important;
+        }
+
+        .product-img {
+            transition: transform 0.7s ease;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+        }
+
+        .price {
+            font-size: 1.75rem;
+            font-weight: 800;
+        }
+
+        .nav-links a.active {
+            color: #0f172a;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 4px;
+        }
+
+        .category-btn.active {
+            background-color: #0f172a !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Top Navigation -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a class="brand" href="#">
+                <span class="material-symbols-outlined">pets</span>
+                Paws n' Play
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn btn-dark rounded-pill px-4 py-2 fw-semibold desktop-btn">Get Started</button>
+
+                <!-- Hamburger -->
+                <button class="hamburger d-lg-none" id="hamburger" aria-label="Toggle menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-header">
+                <a class="brand" href="#">
+                    <span class="material-symbols-outlined">pets</span>
+                    Paws n' Play
+                </a>
+                <button class="close-menu" id="close-menu" aria-label="Close menu">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+
+            <ul class="mobile-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+            <button class="btn btn-dark w-100 py-3 fw-semibold mobile-btn">Get Started</button>
+        </div>
+    </nav>
+
+    <main class="pt-5 pb-5">
+        <div class="container mt-5">
+
+            <!-- Shop Header -->
+            <header class="mb-5">
+                <h1 class="display-4 fw-bold text-dark mb-3">Celestial Shop</h1>
+                <p class="lead text-muted" style="max-width: 620px;">
+                    Curated excellence for your companions. Discover our premium selection of nutrition, play, and
+                    comfort essentials.
+                </p>
+            </header>
+
+            <div class="row g-5">
+
+                <!-- Sidebar Filters -->
+                <div class="col-lg-3">
+
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+
+                            <h5 class="fw-bold text-uppercase small tracking-widest text-muted mb-4">Filter Collection
+                            </h5>
+
+                            <!-- Categories -->
+                            <div class="mb-5">
+                                <h6 class="fw-bold mb-3">Categories</h6>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                    <label class="form-check-label">Food & Nutrition</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Toys & Enrichment</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Accessories & Comfort</label>
+                                </div>
+                            </div>
+
+                            <!-- Pet Types -->
+                            <div class="mb-5">
+                                <h6 class="fw-bold mb-3">Pet Types</h6>
+                                <div class="d-grid grid-2 gap-2">
+                                    <button class="btn btn-dark btn-sm py-2 category-btn active">
+                                        <span class="material-symbols-outlined me-1">pets</span> Dogs
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm py-2">
+                                        <span class="material-symbols-outlined me-1">category</span> Cats
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm py-2">
+                                        <span class="material-symbols-outlined me-1">flutter_dash</span> Birds
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm py-2">
+                                        <span class="material-symbols-outlined me-1">set_meal</span> Fish
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Price Range -->
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="fw-bold mb-0">Price Range</h6>
+                                    <span class="text-primary fw-bold small">$0 - $500</span>
+                                </div>
+                                <input type="range" class="form-range" min="0" max="500" value="250">
+                                <div class="d-flex justify-content-between text-muted small mt-1">
+                                    <span>Min</span>
+                                    <span>Max</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Expert Curated Box -->
+                    <div class="card shadow-sm border-0 mt-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary">verified_user</span>
+                                <span class="text-uppercase fw-bold small text-primary">Expert Curated</span>
+                            </div>
+                            <p class="small text-muted mb-0">
+                                Every item in our shop is vetted by canine care specialists for safety and premium
+                                quality.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <span class="text-muted">Showing <strong>12</strong> results</span>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-muted small fw-bold text-uppercase">Sort By</span>
+                            <select class="form-select form-select-sm w-auto">
+                                <option>Latest Arrivals</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Popularity</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Product Grid -->
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+                        <!-- Product Card 1 -->
+                        <div class="col">
+                            <div class="product-card card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="position-relative">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLn9n15qdSD958_s_6yR7fISD9AvtZZVFdk7Omni8kXkThrcmnkuMmWPJ8g1sVm9kyr2at5TAP_nZ5G2AVMEd8Z5fKMr6oHThK3wWdYpJZfrCCAkMAaVygGJqppyroTc2y1recL3Wd97MMp8Z2km1ee726y-yZVTbSHiIyNevWU8dHa1z-rLWR3nvNJKXHg8Fs6pBwPAhC5SUaWJKxB0HG64pw3o9SJ2rPyKG8uBSuatLaUVz88McXjbUIUiTz3JNLYxlaHuVGkHs"
+                                        class="product-img card-img-top" alt="Artisan Canine Feast"
+                                        style="height: 260px; object-fit: cover;">
+                                    <button
+                                        class="btn btn-light position-absolute top-3 end-3 rounded-circle p-2 shadow-sm">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <span class="badge bg-light text-primary text-uppercase px-3 py-2 mb-3"
+                                        style="width: fit-content;">Nutrition</span>
+                                    <h5 class="card-title fw-bold">Artisan Canine Feast</h5>
+                                    <p class="card-text text-muted small flex-grow-1">Slow-roasted heritage proteins
+                                        with ancient grains and celestial botanicals.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="price text-primary">$89.00</span>
+                                        <button class="btn btn-dark px-4">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="col">
+                            <div class="product-card card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="position-relative">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqYLXNGAhaj6ALzPpwOnBl7qECqboDzuZsOSo1n8-dlJ5ayH4MzPHE5X8ZkNuwtVmVK1PC7fwAbtUoe5iig5m63eRgVGu4gpLyWymvflpGr2R8DiEdDIwLqPi_j9sMleg3iPnt61a-ld4_ixl7LaJcG4kAh_oBelux_-nvTZT3u3t5ciYkJK0dhqJq-AJEIFNwS_PXanKsDqUkz5Jq82ZHHm0x3MI5xbApex_7j96mzDj2qB0asDm4RrWigxoEMXQQ_IYk6xLsa9c"
+                                        class="product-img card-img-top" alt="Sovereign Leather Collar"
+                                        style="height: 260px; object-fit: cover;">
+                                    <button
+                                        class="btn btn-light position-absolute top-3 end-3 rounded-circle p-2 shadow-sm">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <span class="badge bg-light text-primary text-uppercase px-3 py-2 mb-3"
+                                        style="width: fit-content;">Accessories</span>
+                                    <h5 class="card-title fw-bold">Sovereign Leather Collar</h5>
+                                    <p class="card-text text-muted small flex-grow-1">Full-grain Italian leather with
+                                        hand-polished golden brass hardware.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="price text-primary">$125.00</span>
+                                        <button class="btn btn-dark px-4">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="d-flex justify-content-center mt-5 gap-3">
+                        <button class="btn btn-light border">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="btn btn-dark">1</button>
+                        <button class="btn btn-light border">2</button>
+                        <button class="btn btn-light border">3</button>
+                        <button class="btn btn-light border">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ── Footer ──────────────────────────────────────────────────────── -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+
+            <div>
+                <div class="footer-brand">Paws n' Play</div>
+                <p class="footer-brand-desc">Providing high-end editorial care for your beloved companions since 2012.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <div class="d-flex gap-2 footer-newsletter">
+                    <input type="email" placeholder="Email" />
+                    <button>Join</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2024 Paws n' Play. All rights reserved.</span>
+            <div class="footer-icons">
+                <span class="material-symbols-outlined">public</span>
+                <span class="material-symbols-outlined">pets</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ui/navbar.js"></script>
+</body>
+
+</html>
