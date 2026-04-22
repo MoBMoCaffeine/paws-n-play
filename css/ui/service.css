@@ -1,0 +1,121 @@
+header {
+  z-index: 100;
+  width: 100%;
+  height: 30px;
+  background: #eaeaea;
+  box-shadow: rgb(182, 182, 182) 3px 5px 6px;
+  border-radius: 10px;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 5px;
+  justify-items: center;
+}
+.head span {
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+section {
+  width: 80%;
+  min-height: 600px;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  border-style: solid;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  background-color: rgb(255, 255, 255);
+  height: inherit;
+  height: 95%;
+  width: 95%;
+  margin: 2% auto;
+}
+.div1,
+.div2,
+.div5,
+.div4,
+.div3 {
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.div3 {
+  grid-row: 1/3;
+  grid-column: 3/4;
+  height: 100%;
+}
+.container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.div1:hover .overlay1,
+.div3:hover .overlay3,
+.div2:hover .overlay2,
+.div4:hover .overlay4,
+.div5:hover .overlay5 {
+  opacity: 1;
+}
+.overlay1,
+.overlay2,
+.overlay3,
+.overlay5,
+.overlay4 {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay1 h3,
+.overlay2 h3,
+.overlay3 h3,
+.overlay4 h3,
+.overlay5 h3 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+@media (max-width: 567px) {
+  section {
+    height: 100px;
+  }
+  .container {
+    gap: 5px;
+  }
+  .overlay1 h3,
+  .overlay2 h3,
+  .overlay3 h3,
+  .overlay4 h3,
+  .overlay5 h3 {
+    font-size: 25px;
+  }
+  .div1,
+  .div2,
+  .div5,
+  .div4,
+  .div3 {
+    height: 100%;
+  }
+}

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <title>Paws n' Play</title>
+    <meta name="description" content="Discover a world of joy and furry companionship at Paws n' Play! Explore our curated products, trusted care services, and expert support for happier, healthier pets.">
+    <meta name="keywords" content="pet shop, pet care, pet products, grooming, boarding, adoption, veterinary services, pet nutrition, pet training">
+    <meta name="author" content="Paws n' Play Team">    
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/landing.css">
+</head>
+
+<body class="landing-page">
+    <header class="hero" id="home">
+        <div class="hero__backdrop"></div>
+
+        <nav class="hero__nav" aria-label="Primary navigation">
+            <a href="#home" class="hero__brand">
+                <i class="fa-solid fa-paw"></i>
+                <span>Paws n' Play</span>
+            </a>
+
+            <button class="hero__menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="navLinks">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="hero__nav-panel" id="navLinks">
+                <a href="#shop">Shop <i class="fa-solid fa-angle-down"></i></a>
+                <a href="#services">Services <i class="fa-solid fa-angle-down"></i></a>
+                <a href="#about">About Us</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a href="#contact" class="hero__cta">Get Started</a>
+        </nav>
+
+        <div class="hero__content-shell">
+            <div class="hero__copy">
+                <h1>Pawsitively Perfect: Where Every Pet's Dream Comes True!</h1>
+                <p>
+                    Welcome to Paws n' Play, the ultimate destination for pet lovers! Explore a world of joy and furry
+                    companionship with our curated products, trusted care services, and expert support.
+                </p>
+                <a href="#shop" class="hero__shop-btn">
+                    <span>Shop Now</span>
+                    <i class="fa-solid fa-paw"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="landing-main">
+        <section class="shop" id="shop">
+            <div class="shop__inner">
+                <div class="shop__section-tag">
+                    <i class="fa-solid fa-paw"></i>
+                    <span>Shop</span>
+                </div>
+
+                <div class="shop__panel">
+                    <div class="shop__panel-header">
+                        <h2>Featured Products</h2>
+
+                        <label class="shop__search" aria-label="Search products">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search...">
+                        </label>
+                    </div>
+
+                    <div class="shop__filters" role="tablist" aria-label="Product categories">
+                        <button class="shop__filter-btn is-active" onclick="filterSelection('all', this)"
+                            type="button">Random</button>
+                        <button class="shop__filter-btn" onclick="filterSelection('cat', this)" type="button">Cat</button>
+                        <button class="shop__filter-btn" onclick="filterSelection('dog', this)" type="button">Dog</button>
+                        <button class="shop__filter-btn" onclick="filterSelection('fish', this)" type="button">Fish</button>
+                        <button class="shop__filter-btn" onclick="filterSelection('bird', this)"
+                            type="button">Birds</button>
+                    </div>
+
+                    <div class="shop__grid">
+                        <article class="shop__card cat">
+                            <img src="./assets/images/cat_food_box.jpg" alt="Packaged cat food">
+                            <div class="shop__card-overlay">
+                                <div class="shop__card-meta">
+                                    <span class="shop__card-price">₦15,000.00</span>
+                                    <button class="shop__card-favorite" type="button" aria-label="Add to favorites">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="shop__card-copy">
+                                    <h3>Multivitamin For Cat</h3>
+                                    <p>Balanced daily support for healthy coats, strong immunity, and playful energy.</p>
+                                </div>
+                                <div class="shop__card-actions">
+                                    <div class="shop__card-quantity" aria-label="Quantity">
+                                        <button type="button">+</button>
+                                        <span>1</span>
+                                        <button type="button">-</button>
+                                    </div>
+                                    <button class="shop__card-add" type="button">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="shop__card dog">
+                            <img src="./assets/images/dog_food_box.jpg" alt="Premium dog food carton">
+                            <div class="shop__card-overlay">
+                                <div class="shop__card-meta">
+                                    <span class="shop__card-price">₦18,500.00</span>
+                                    <button class="shop__card-favorite" type="button" aria-label="Add to favorites">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="shop__card-copy">
+                                    <h3>Power Meal For Dogs</h3>
+                                    <p>Protein-rich nutrition crafted for active dogs and healthy digestion.</p>
+                                </div>
+                                <div class="shop__card-actions">
+                                    <div class="shop__card-quantity" aria-label="Quantity">
+                                        <button type="button">+</button>
+                                        <span>1</span>
+                                        <button type="button">-</button>
+                                    </div>
+                                    <button class="shop__card-add" type="button">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="shop__card bird">
+                            <img src="./assets/images/dog_bag.jpg" alt="Pet food bag with dog illustration">
+                            <div class="shop__card-overlay">
+                                <div class="shop__card-meta">
+                                    <span class="shop__card-price">₦14,250.00</span>
+                                    <button class="shop__card-favorite" type="button" aria-label="Add to favorites">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="shop__card-copy">
+                                    <h3>Healthy Crunch Mix</h3>
+                                    <p>Crisp bites with vitamins and minerals to keep pets happy through the day.</p>
+                                </div>
+                                <div class="shop__card-actions">
+                                    <div class="shop__card-quantity" aria-label="Quantity">
+                                        <button type="button">+</button>
+                                        <span>1</span>
+                                        <button type="button">-</button>
+                                    </div>
+                                    <button class="shop__card-add" type="button">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="shop__card fish">
+                            <img src="./assets/images/fish_food.jpg" alt="Fish food jar">
+                            <div class="shop__card-overlay">
+                                <div class="shop__card-meta">
+                                    <span class="shop__card-price">₦9,500.00</span>
+                                    <button class="shop__card-favorite" type="button" aria-label="Add to favorites">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="shop__card-copy">
+                                    <h3>Aqua Vital Feed</h3>
+                                    <p>Clean floating formula for vibrant color, stamina, and aquarium health.</p>
+                                </div>
+                                <div class="shop__card-actions">
+                                    <div class="shop__card-quantity" aria-label="Quantity">
+                                        <button type="button">+</button>
+                                        <span>1</span>
+                                        <button type="button">-</button>
+                                    </div>
+                                    <button class="shop__card-add" type="button">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="shop__card cat">
+                            <img src="./assets/images/cat_food_box.jpg" alt="Packaged cat food">
+                            <div class="shop__card-overlay">
+                                <div class="shop__card-meta">
+                                    <span class="shop__card-price">₦15,000.00</span>
+                                    <button class="shop__card-favorite" type="button" aria-label="Add to favorites">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="shop__card-copy">
+                                    <h3>Multivitamin For Cat</h3>
+                                    <p>Balanced daily support for healthy coats, strong immunity, and playful energy.</p>
+                                </div>
+                                <div class="shop__card-actions">
+                                    <div class="shop__card-quantity" aria-label="Quantity">
+                                        <button type="button">+</button>
+                                        <span>1</span>
+                                        <button type="button">-</button>
+                                    </div>
+                                    <button class="shop__card-add" type="button">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="shop__card dog">
+                            <img src="./assets/images/dog_food_box.jpg" alt="Premium dog food carton">
+                            <div class="shop__card-overlay">
+                                <div class="shop__card-meta">
+                                    <span class="shop__card-price">₦18,500.00</span>
+                                    <button class="shop__card-favorite" type="button" aria-label="Add to favorites">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="shop__card-copy">
+                                    <h3>Power Meal For Dogs</h3>
+                                    <p>Protein-rich nutrition crafted for active dogs and healthy digestion.</p>
+                                </div>
+                                <div class="shop__card-actions">
+                                    <div class="shop__card-quantity" aria-label="Quantity">
+                                        <button type="button">+</button>
+                                        <span>1</span>
+                                        <button type="button">-</button>
+                                    </div>
+                                    <button class="shop__card-add" type="button">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="shop__card bird">
+                            <img src="./assets/images/dog_bag.jpg" alt="Pet food bag with dog illustration">
+                            <div class="shop__card-overlay">
+                                <div class="shop__card-meta">
+                                    <span class="shop__card-price">₦14,250.00</span>
+                                    <button class="shop__card-favorite" type="button" aria-label="Add to favorites">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="shop__card-copy">
+                                    <h3>Healthy Crunch Mix</h3>
+                                    <p>Crisp bites with vitamins and minerals to keep pets happy through the day.</p>
+                                </div>
+                                <div class="shop__card-actions">
+                                    <div class="shop__card-quantity" aria-label="Quantity">
+                                        <button type="button">+</button>
+                                        <span>1</span>
+                                        <button type="button">-</button>
+                                    </div>
+                                    <button class="shop__card-add" type="button">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="shop__card fish">
+                            <img src="./assets/images/fish_food.jpg" alt="Fish food jar">
+                            <div class="shop__card-overlay">
+                                <div class="shop__card-meta">
+                                    <span class="shop__card-price">₦9,500.00</span>
+                                    <button class="shop__card-favorite" type="button" aria-label="Add to favorites">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="shop__card-copy">
+                                    <h3>Aqua Vital Feed</h3>
+                                    <p>Clean floating formula for vibrant color, stamina, and aquarium health.</p>
+                                </div>
+                                <div class="shop__card-actions">
+                                    <div class="shop__card-quantity" aria-label="Quantity">
+                                        <button type="button">+</button>
+                                        <span>1</span>
+                                        <button type="button">-</button>
+                                    </div>
+                                    <button class="shop__card-add" type="button">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="shop__more">
+                        <a href="./pages/shop.html">View More &gt;&gt;&gt;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="services__inner">
+                <div class="services__section-tag">
+                    <i class="fa-solid fa-paw"></i>
+                    <span>Services</span>
+                </div>
+
+                <div class="services__grid">
+                    <article class="services__card services__card--grooming">
+                        <img src="./assets/images/logo.jpg" alt="Woman holding a pet">
+                        <div class="services__overlay">
+                            <div class="services__overlay-content">
+                                <h3>Grooming</h3>
+                                <p>Gentle bathing, styling, and coat care designed to keep every pet fresh, calm, and camera-ready.</p>
+                                <a href="#" class="services__button">Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="services__card services__card--boarding">
+                        <img src="./assets/images/shoe1.jpg" alt="Outdoor boarding area with dogs">
+                        <div class="services__overlay">
+                            <div class="services__overlay-content">
+                                <h3>Boarding</h3>
+                                <p>Safe overnight stays with spacious play areas, attentive staff, and a routine pets can settle into quickly.</p>
+                                <a href="#" class="services__button">Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="services__card services__card--adoption">
+                        <img src="./assets/images/shoe3.jpg" alt="Dog sitting in front of a shelter">
+                        <div class="services__overlay">
+                            <div class="services__overlay-content">
+                                <h3>Adoption</h3>
+                                <p>Thoughtful matching, guidance, and support to help families welcome the right companion home.</p>
+                                <a href="#" class="services__button">Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="services__card services__card--veterinary">
+                        <img src="./assets/images/shoe4.jpg" alt="Veterinarian with a dog">
+                        <div class="services__overlay">
+                            <div class="services__overlay-content">
+                                <h3>Veterinary</h3>
+                                <p>Trusted checkups, diagnostics, and personalized treatment plans delivered with warmth and precision.</p>
+                                <a href="#" class="services__button">Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="services__card services__card--training">
+                        <img src="./assets/images/shoe2.jpg" alt="Dog training indoors">
+                        <div class="services__overlay">
+                            <div class="services__overlay-content">
+                                <h3>Training</h3>
+                                <p>Reward-based sessions that build confidence, better behavior, and stronger daily routines.</p>
+                                <a href="#" class="services__button">Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about__inner">
+                <div class="about__section-tag">
+                    <i class="fa-solid fa-paw"></i>
+                    <span>About Us</span>
+                </div>
+
+                <div class="about__content">
+                    <div class="about__copy">
+                        <p>
+                            At Paws n' Play, our story began with a deep love for animals and a vision to build a
+                            welcoming place where pets and their people feel completely at home.
+                        </p>
+                        <p>
+                            We carefully curate every product and service with quality, comfort, and well-being in
+                            mind, from everyday essentials to expert care that supports happier, healthier lives.
+                        </p>
+                        <p>
+                            Our team is committed to strengthening the bond between pets and families through trusted
+                            guidance, thoughtful experiences, and heartfelt service at every step.
+                        </p>
+                        <p>
+                            Customer delight is central to everything we do, and we work hard to make each interaction
+                            feel personal, dependable, and joyful.
+                        </p>
+                        <p>
+                            Join us as we create a world where every pet is cherished, celebrated, and cared for with
+                            love.
+                        </p>
+                    </div>
+
+                    <div class="about__visual">
+                        <img src="./assets/images/main.jpg" class="about__main-image"
+                            alt="Cat sitting beside a decorated cake">
+                        <img src="./assets/images/small.jpg" class="about__accent-image"
+                            alt="Cat beside a smaller dessert">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team" id="team">
+            <div class="team__inner">
+                <div class="team__section-tag">
+                    <i class="fa-solid fa-paw"></i>
+                    <span>Our Team</span>
+                </div>
+
+                <div class="team__grid">
+                    <article class="team__card">
+                        <img src="./assets/images/vet1.png" alt="Dr. Olivia Avery">
+                        <h3>Dr. Olivia Avery</h3>
+                        <p>Senior Veterinarian</p>
+                        <div class="team__socials">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                    </article>
+
+                    <article class="team__card">
+                        <img src="./assets/images/vet2.png" alt="Phoebe Rivera">
+                        <h3>Phoebe Rivera</h3>
+                        <p>Pet Care Specialist</p>
+                        <div class="team__socials">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                    </article>
+
+                    <article class="team__card">
+                        <img src="./assets/images/vet3.png" alt="Lara Sawyer">
+                        <h3>Lara Sawyer</h3>
+                        <p>Lead Veterinarian</p>
+                        <div class="team__socials">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                    </article>
+
+                    <article class="team__card">
+                        <img src="./assets/images/vet4.png" alt="Derril Wilkinson">
+                        <h3>Derril Wilkinson</h3>
+                        <p>Pet Nutritionist</p>
+                        <div class="team__socials">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="team__actions">
+                    <a href="./pages/vets_dictionary.html" class="team__button">View Vets Directory</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog" id="blog">
+            <div class="blog__inner">
+                <div class="blog__section-tag">
+                    <i class="fa-solid fa-paw"></i>
+                    <span>Blog</span>
+                </div>
+
+                <div class="blog__content">
+                    <div class="blog__copy">
+                        <h2>Milestone: 20,000 Pets Treated</h2>
+                        <p>
+                            This month marks an inspiring milestone for our team and the families we support. From
+                            routine wellness checks to advanced treatments, every visit reflects the trust our
+                            community places in us.
+                        </p>
+                        <p>
+                            We continue to invest in modern care, compassionate service, and better everyday
+                            experiences so pets can thrive at every stage of life.
+                        </p>
+
+                        <div class="blog__reviewed">
+                            <h3>Reviewed Insight</h3>
+                            <p>
+                                Our newest care recap highlights the small improvements that make the biggest
+                                difference: faster response times, friendlier consultations, and calmer recovery spaces.
+                            </p>
+                        </div>
+
+                        <a href="#" class="blog__button">Read more</a>
+                    </div>
+
+                    <div class="blog__media">
+                        <img src="./assets/images/dog 32.jpg" alt="Golden retriever surrounded by toys">
+                        <button class="blog__play" type="button" aria-label="Play featured story">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact__inner">
+                <div class="contact__section-tag">
+                    <i class="fa-solid fa-paw"></i>
+                    <span>Get in touch</span>
+                </div>
+
+                <div class="contact__content">
+                    <form class="contact__form">
+                        <div class="contact__form-grid">
+                            <label>
+                                First name
+                                <input type="text" placeholder="First name">
+                            </label>
+                            <label>
+                                Last name
+                                <input type="text" placeholder="Last name">
+                            </label>
+                        </div>
+
+                        <label>
+                            Email
+                            <input type="email" placeholder="you@example.com">
+                        </label>
+
+                        <label>
+                            Message
+                            <textarea rows="5" placeholder="Tell us how we can help."></textarea>
+                        </label>
+
+                        <p class="contact__note">You agree to our friendly privacy policy.</p>
+
+                        <button type="submit">Send message</button>
+                    </form>
+
+                    <div class="contact__details">
+                        <article>
+                            <i class="fa-regular fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>hello@pawsnplay.com</p>
+                            <span>We reply within 24 hours.</span>
+                        </article>
+
+                        <article>
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <h3>Live chat</h3>
+                            <p>Start a conversation</p>
+                            <span>Available during working hours.</span>
+                        </article>
+
+                        <article>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3>Office</h3>
+                            <p>12 Veterinary Care Plaza</p>
+                            <span>Cairo, Egypt</span>
+                        </article>
+
+                        <article>
+                            <i class="fa-solid fa-phone"></i>
+                            <h3>Phone</h3>
+                            <p>+20 109 261 3149</p>
+                            <span>Mon to Sat, 9am to 6pm.</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__newsletter">
+                <div class="footer__newsletter-copy">
+                    <h3>Join our newsletter</h3>
+                    <p>Be the first to receive the latest updates on promos, sales, and special offers.</p>
+                </div>
+
+                <form class="footer__newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer__grid">
+                <div class="footer__brand-block">
+                    <h2>
+                        <i class="fa-solid fa-paw"></i>
+                        Paws n' Play
+                    </h2>
+                    <p>Where wagging tails and purring hearts reign supreme.</p>
+                </div>
+
+                <div class="footer__column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Pet Adoption</a></li>
+                        <li><a href="#">Nutrition</a></li>
+                        <li><a href="#">Pet Care</a></li>
+                        <li><a href="#">Pet Food</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Grooming</a></li>
+                        <li><a href="#services">Boarding</a></li>
+                        <li><a href="#services">Training</a></li>
+                        <li><a href="#services">Veterinary</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4>Social</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Licenses</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 Paws n' Play. All rights reserved.</p>
+
+                <div class="footer__icons">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/ui/shop.js"></script>
+    <script src="./js/ui/navbar.js"></script>
+</body>
+
+</html>
+        <!-- <i class="fab fa-facebook"></i>
+                <i class="fab fa-github"></i>
+                <i class="fa-regular fa-hand-peace"></i>
+                <i class="fab fa-dribbble"></i>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./js/ui/shop.js"></script>
+</body>
+
+</html>  <i class="fab fa-facebook"></i>
+                <i class="fab fa-github"></i>
+                <i class="fa-regular fa-hand-peace"></i>
+                <i class="fab fa-dribbble"></i>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./js/ui/shop.js"></script>
+</body>
+
+</html> -->
