@@ -1,46 +1,30 @@
-// ==================== Mobile Navigation ====================
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-const hamburger = document.getElementById('hamburger');
-const closeMenuBtn = document.getElementById('close-menu');
-const mobileMenu = document.getElementById('mobile-menu');
-const siteNav = document.querySelector('.site-nav');
+if (menuToggle && navLinks) {
+    const toggleMenu = () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+    };
 
-function openMobileMenu() {
-    mobileMenu.classList.add('open');
-    siteNav.classList.add('menu-open');
-    hamburger.innerHTML = '<span class="material-symbols-outlined">close</span>';
-}
+    menuToggle.addEventListener("click", toggleMenu);
 
-function closeMobileMenu() {
-    mobileMenu.classList.remove('open');
-    siteNav.classList.remove('menu-open');
-    hamburger.innerHTML = '<span class="material-symbols-outlined">menu</span>';
-}
-
-hamburger.addEventListener('click', () => {
-    if (mobileMenu.classList.contains('open')) {
-        closeMobileMenu();
-    } else {
-        openMobileMenu();
-    }
-});
-
-closeMenuBtn.addEventListener('click', closeMobileMenu);
-
-siteNav.addEventListener('click', (e) => {
-    if (e.target === siteNav) {
-        closeMobileMenu();
-    }
-});
-
-document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        closeMobileMenu();
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
     });
-});
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape" && mobileMenu.classList.contains('open')) {
-        closeMobileMenu();
-    }
-});
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            navLinks.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+    });
+}
