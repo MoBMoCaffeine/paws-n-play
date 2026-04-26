@@ -18,14 +18,95 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(218, 226, 252, 0.7), transparent 28%),
+                linear-gradient(180deg, #fbfcff 0%, #f4f7fb 100%);
         }
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
 
+        main {
+            padding-top: 8rem;
+        }
+
+        .shop-hero {
+            padding: 0 0 2rem;
+        }
+
+        .shop-hero__panel {
+            position: relative;
+            overflow: hidden;
+            padding: 2.5rem;
+            border-radius: 2rem;
+            background: linear-gradient(135deg, #14213a 0%, #2a416f 100%);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
+            color: #fff;
+        }
+
+        .shop-hero__panel::after {
+            content: "";
+            position: absolute;
+            right: -4rem;
+            bottom: -5rem;
+            width: 18rem;
+            height: 18rem;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 70%);
+        }
+
+        .shop-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.55rem 0.95rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .shop-hero h1 {
+            margin-bottom: 1rem;
+            font-size: clamp(2.1rem, 4vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        .shop-hero p {
+            max-width: 42rem;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.84);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .shop-shell {
+            margin-top: 2rem;
+        }
+
+        .shop-filter-card,
+        .shop-info-card,
+        .shop-results-bar,
+        .product-card {
+            border: 1px solid rgba(255, 255, 255, 0.72) !important;
+            background: rgba(255, 255, 255, 0.86) !important;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        .shop-filter-card,
+        .shop-info-card {
+            border-radius: 1.5rem;
+        }
+
         .product-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 1.35rem;
         }
 
         .product-card:hover {
@@ -46,15 +127,60 @@
             font-weight: 800;
         }
 
-        .nav-links a.active {
-            color: #0f172a;
-            border-bottom: 2px solid #0f172a;
-            padding-bottom: 4px;
-        }
-
         .category-btn.active {
             background-color: #0f172a !important;
             color: white !important;
+        }
+
+        .category-btn {
+            border-radius: 999px !important;
+            font-weight: 700;
+        }
+
+        .shop-results-bar {
+            border-radius: 1.2rem;
+            padding: 1rem 1.2rem;
+        }
+
+        .shop-results-bar .form-select {
+            border-radius: 999px;
+            border-color: #dbe2ea;
+            padding-left: 1rem;
+            padding-right: 2.5rem;
+        }
+
+        .product-card .card-body {
+            padding: 1.35rem;
+        }
+
+        .product-card .badge {
+            border-radius: 999px;
+            background: #eaf0ff !important;
+            color: #1d2d50 !important;
+            font-weight: 700;
+        }
+
+        .product-card .btn-dark {
+            border: none;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #14213a 0%, #24385f 100%);
+        }
+
+        .pagination button {
+            border-radius: 999px !important;
+            min-width: 3rem;
+            min-height: 3rem;
+        }
+
+        @media (max-width: 991px) {
+            main {
+                padding-top: 7rem;
+            }
+
+            .shop-hero__panel {
+                padding: 2rem 1.5rem;
+                border-radius: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -105,24 +231,28 @@
         </div>
     </nav>
 
-    <main class="pt-5 pb-5">
-        <div class="container mt-5">
+    <main class="pb-5">
+        <div class="container">
+            <section class="shop-hero">
+                <div class="shop-hero__panel">
+                    <div class="shop-eyebrow">
+                        <span class="material-symbols-outlined">pets</span>
+                        curated pet essentials
+                    </div>
+                    <h1>Shop smarter for happier, healthier pets.</h1>
+                    <p>
+                        Discover nutrition, accessories, and comfort picks arranged in a cleaner, more premium shopping
+                        experience.
+                    </p>
+                </div>
+            </section>
 
-            <!-- Shop Header -->
-            <header class="mb-5">
-                <h1 class="display-4 fw-bold text-dark mb-3">Celestial Shop</h1>
-                <p class="lead text-muted" style="max-width: 620px;">
-                    Curated excellence for your companions. Discover our premium selection of nutrition, play, and
-                    comfort essentials.
-                </p>
-            </header>
-
-            <div class="row g-5">
+            <div class="row g-5 shop-shell">
 
                 <!-- Sidebar Filters -->
                 <div class="col-lg-3">
 
-                    <div class="card shadow-sm border-0 h-100">
+                    <div class="card shadow-sm border-0 h-100 shop-filter-card">
                         <div class="card-body p-4">
 
                             <h5 class="fw-bold text-uppercase small tracking-widest text-muted mb-4">Filter Collection
@@ -181,7 +311,7 @@
                     </div>
 
                     <!-- Expert Curated Box -->
-                    <div class="card shadow-sm border-0 mt-4">
+                    <div class="card shadow-sm border-0 mt-4 shop-info-card">
                         <div class="card-body p-4">
                             <div class="d-flex align-items-center gap-3 mb-3">
                                 <span class="material-symbols-outlined text-primary">verified_user</span>
@@ -199,7 +329,7 @@
                 <!-- Main Content -->
                 <div class="col-lg-9">
 
-                    <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4 shop-results-bar flex-wrap gap-3">
                         <span class="text-muted">Showing <strong>12</strong> results</span>
                         <div class="d-flex align-items-center gap-3">
                             <span class="text-muted small fw-bold text-uppercase">Sort By</span>

@@ -51,7 +51,9 @@
 /* ─── Base ──────────────────────────────────────────────────── */
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: var(--background);
+  background:
+    radial-gradient(circle at top left, rgba(213, 227, 252, 0.9), transparent 28%),
+    linear-gradient(180deg, #fbfcff 0%, #f6f8fc 100%);
   color: var(--on-background);
 }
 
@@ -68,7 +70,7 @@ body {
 .hero {
   position: relative;
   background-color: var(--primary-container);
-  padding: 8rem 0;
+  padding: 8.75rem 0 7rem;
   overflow: hidden;
   margin-top: 80px;
 }
@@ -76,8 +78,10 @@ body {
 .hero-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--primary-container), #1a2b4a);
-  opacity: 0.9;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.12), transparent 24%),
+    linear-gradient(135deg, var(--primary-container), #1a2b4a);
+  opacity: 0.96;
 }
 
 .hero-content {
@@ -115,10 +119,12 @@ body {
 .search-card {
   max-width: 1280px;
   margin: 0 auto;
-  background-color: var(--surface-container-lowest);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(18px);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -164,8 +170,8 @@ body {
   width: 100%;
   padding: 1rem 1rem 1rem 3rem;
   background-color: var(--surface-container-low);
-  border: none;
-  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
   color: var(--on-surface);
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.95rem;
@@ -176,7 +182,8 @@ body {
 }
 
 .search-input-wrap input:focus {
-  box-shadow: 0 0 0 2px var(--primary-container);
+  border-color: rgba(19, 27, 46, 0.18);
+  box-shadow: 0 0 0 4px rgba(19, 27, 46, 0.08);
   background-color: #fff;
 }
 
@@ -186,10 +193,10 @@ body {
 
 .btn-find {
   width: 100%;
-  background-color: var(--primary-container);
+  background: linear-gradient(135deg, #14213a 0%, #24385f 100%);
   color: var(--on-primary);
   padding: 1rem 2.5rem;
-  border-radius: 0.5rem;
+  border-radius: 999px;
   font-weight: 700;
   border: none;
   display: flex;
@@ -237,18 +244,22 @@ body {
 }
 
 .vet-card {
-  background-color: var(--surface-container-lowest);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.78);
   padding: 2rem;
-  border-radius: 0.75rem;
+  border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform 0.2s;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(14px);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .vet-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 24px 52px rgba(15, 23, 42, 0.12);
 }
 
 .vet-avatar {
@@ -257,7 +268,7 @@ body {
   border-radius: 9999px;
   overflow: hidden;
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 0 4px var(--surface-container-low);
+  box-shadow: 0 0 0 6px rgba(234, 240, 255, 0.96);
 }
 
 .vet-avatar img {
@@ -298,15 +309,28 @@ body {
   color: var(--on-surface-variant);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.vet-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 1.4rem;
+  color: var(--on-surface-variant);
+  font-size: 0.92rem;
+}
+
+.vet-location .material-symbols-outlined {
+  font-size: 1rem;
 }
 
 .btn-profile {
   width: 100%;
   padding: 0.75rem;
-  background-color: var(--primary-container);
+  background: linear-gradient(135deg, #14213a 0%, #24385f 100%);
   color: var(--on-primary);
-  border-radius: 0.5rem;
+  border-radius: 999px;
   font-weight: 700;
   border: none;
   transition: opacity 0.2s;
@@ -322,9 +346,9 @@ body {
   justify-self: center;
   margin-top: 2rem;
   padding: 0.75rem 2rem;
-  background-color: var(--primary-container);
+  background: linear-gradient(135deg, #14213a 0%, #24385f 100%);
   color: var(--on-primary);
-  border-radius: 0.5rem;
+  border-radius: 999px;
   font-weight: 700;
   border: none;
   transition: opacity 0.2s;
@@ -337,7 +361,8 @@ body {
 /* ─── Mission Section ───────────────────────────────────────── */
 .mission {
   padding: 6rem 2rem;
-  background-color: var(--surface-container-low);
+  background:
+    linear-gradient(180deg, rgba(234, 240, 255, 0.7) 0%, rgba(241, 245, 249, 0.95) 100%);
 }
 
 .mission-inner {
@@ -365,7 +390,7 @@ body {
   left: -1.5rem;
   width: 8rem;
   height: 8rem;
-  background-color: var(--secondary-container);
+  background: linear-gradient(135deg, #d5e3fc 0%, #eef4ff 100%);
   border-radius: 0.75rem;
   z-index: 0;
 }
@@ -377,7 +402,7 @@ body {
   aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 1rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.16);
 }
 
 .mission-body .section-title {
